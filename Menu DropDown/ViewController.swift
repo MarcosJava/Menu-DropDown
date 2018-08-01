@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         button.setTitle("Color", for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(button)
         
         button.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         button.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
@@ -125,8 +126,8 @@ class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = dropDownOption[indexPath.row]
-        cell.backgroundColor = .darkGray
-        
+        cell.textLabel?.textColor = .white
+        cell.backgroundColor = .darkGray        
         return cell
     }
     
