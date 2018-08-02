@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         button = BtnMenuDropDown.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        button.setTitle("Color", for: .normal)
+        button.setTitle("Cores", for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(button)
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         button.widthAnchor.constraint(equalToConstant: 150).isActive = true
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        button.dropView.dropDownOption = ["Assim", "Olha"]
+        button.dropView.dropDownOption = ["Vermelho", "Azul", "Verde", "Laranja", "Roxo"]
         
     }
 
@@ -69,28 +69,30 @@ class BtnMenuDropDown: UIButton, DropDownProtocol {
     
     var isOpen = false
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         if !isOpen {
-            isOpen = true
-            NSLayoutConstraint.deactivate([self.height])
-            
-            //Tamanho maximo [/ Max Size
-            if dropView.tableView.contentSize.height > 150 {
-                self.height.constant = 150
-
-            } else { //Tamanho da tableView [/ There are same size in tableView
-                self.height.constant = dropView.tableView.contentSize.height
-            }
-            NSLayoutConstraint.activate([self.height])
-            
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
-                self.dropView.layoutIfNeeded()
-                self.dropView.center.y += self.dropView.frame.height / 2
-            }, completion: nil)
+            showDropDown()
             
         } else {
             dimissDropDown()
         }
+    }
+    
+    func showDropDown() {
+        isOpen = true
+        NSLayoutConstraint.deactivate([self.height])
+        //Tamanho maximo [/ Max Size
+        if dropView.tableView.contentSize.height > 150 {
+            self.height.constant = 150
+            
+        } else { //Tamanho da tableView [/ There are same size in tableView
+            self.height.constant = dropView.tableView.contentSize.height
+        }
+        NSLayoutConstraint.activate([self.height])
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+            self.dropView.layoutIfNeeded()
+            self.dropView.center.y += self.dropView.frame.height / 2
+        }, completion: nil)
     }
     
     func dimissDropDown() {

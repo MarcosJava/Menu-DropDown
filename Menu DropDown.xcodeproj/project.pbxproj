@@ -9,18 +9,14 @@
 /* Begin PBXBuildFile section */
 		1810A5BA21114829002C6665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810A5B921114829002C6665 /* AppDelegate.swift */; };
 		1810A5BC21114829002C6665 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810A5BB21114829002C6665 /* ViewController.swift */; };
-		1810A5BF21114829002C6665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1810A5BD21114829002C6665 /* Main.storyboard */; };
 		1810A5C12111482B002C6665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1810A5C02111482B002C6665 /* Assets.xcassets */; };
-		1810A5C42111482B002C6665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1810A5C22111482B002C6665 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1810A5B621114829002C6665 /* Menu DropDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu DropDown.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1810A5B921114829002C6665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1810A5BB21114829002C6665 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1810A5BE21114829002C6665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1810A5C02111482B002C6665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1810A5C32111482B002C6665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1810A5C52111482B002C6665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,9 +52,7 @@
 			children = (
 				1810A5B921114829002C6665 /* AppDelegate.swift */,
 				1810A5BB21114829002C6665 /* ViewController.swift */,
-				1810A5BD21114829002C6665 /* Main.storyboard */,
 				1810A5C02111482B002C6665 /* Assets.xcassets */,
-				1810A5C22111482B002C6665 /* LaunchScreen.storyboard */,
 				1810A5C52111482B002C6665 /* Info.plist */,
 			);
 			path = "Menu DropDown";
@@ -122,9 +116,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1810A5C42111482B002C6665 /* LaunchScreen.storyboard in Resources */,
 				1810A5C12111482B002C6665 /* Assets.xcassets in Resources */,
-				1810A5BF21114829002C6665 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,25 +133,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		1810A5BD21114829002C6665 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1810A5BE21114829002C6665 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1810A5C22111482B002C6665 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1810A5C32111482B002C6665 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1810A5C62111482B002C6665 /* Debug */ = {
